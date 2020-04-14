@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1001.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.doctor.DoctorController">
+   <children>
+      <ToolBar prefHeight="49.0" prefWidth="1001.0" stylesheets="@../../theme.css">
+         <items>
+            <Region prefHeight="45.0" prefWidth="71.0" />
+            <ImageView fitHeight="33.0" fitWidth="34.0">
+               <image>
+                  <Image url="@../icons/dashboard.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="DASHBOARD" wrappingWidth="184.896484375">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Text>
+            <Region prefHeight="45.0" prefWidth="130.0" />
+            <Label fx:id="doctorRoom" prefHeight="30.0" prefWidth="213.0" text="RoomNo" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="doctorUserName" prefHeight="30.0" prefWidth="224.0" text="USERNAME" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <ToolBar prefHeight="45.0" prefWidth="94.0">
+              <items>
+                <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#logoutDoctor" text="Logout" />
+              </items>
+            </ToolBar>
+         </items>
+      </ToolBar>
+      <VBox layoutY="59.0" prefHeight="689.0" prefWidth="1001.0">
+         <children>
+            <HBox prefHeight="1.0" prefWidth="1001.0">
+               <children>
+                  <TextField fx:id="filterDoctorName" onAction="#findUpcomingPatientFromList" promptText="Filter By Name">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="filterButton" mnemonicParsing="false" onAction="#findUpcomingPatientFromList" text="Filter">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <Separator prefHeight="0.0" prefWidth="1047.0" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="UPCOMING PATIENTS">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Text>
+            <TableView fx:id="upcomingTable" prefHeight="601.0" prefWidth="981.0">
+              <columns>
+                <TableColumn fx:id="colName" editable="false" prefWidth="144.0" sortable="false" text="Name" />
+                  <TableColumn fx:id="colAppDate" editable="false" prefWidth="160.0" sortable="false" text="Appointment Date" />
+                  <TableColumn fx:id="colAppTime" editable="false" prefWidth="173.0" sortable="false" text="Appointment Time" />
+                  <TableColumn fx:id="colPhoneNo" editable="false" prefWidth="121.0" sortable="false" text="Phone No." />
+                  <TableColumn fx:id="colAddPrescription" editable="false" prefWidth="134.0" sortable="false" />
+              </columns>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="5.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

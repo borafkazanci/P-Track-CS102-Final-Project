@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?zml version="1.0" encoding="UTF-8"?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="414.0" prefWidth="672.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.authentication.AuthController">
+    <children>
+        <JFXTabPane layoutX="-1.0" prefHeight="414.0" prefWidth="692.0" stylesheets="@../../theme.css">
+            <tabs>
+                <Tab text="Patient">
+               <content>
+                  <AnchorPane prefHeight="401.0" prefWidth="673.0">
+                     <children>
+                        <Text layoutX="53.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="P-Track Hospital Management System" wrappingWidth="585.083984375">
+                           <font>
+                              <Font size="34.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="39.0" fitWidth="40.0" layoutX="53.0" layoutY="97.0">
+                           <image>
+                              <Image url="@../icons/user.png" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="102.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Log In" wrappingWidth="88.046875">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                        </Text>
+                        <VBox layoutX="53.0" layoutY="144.0" prefHeight="150.0" prefWidth="337.0">
+                           <children>
+                              <Line endX="236.0" startX="-100.0">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Line>
+                              <TextField fx:id="citizenshipIDField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#enterPatientButton" prefHeight="30.0" prefWidth="190.0" promptText="Citizenship ID">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Button fx:id="loginButton1" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#enterPatientButton" prefHeight="30.0" prefWidth="80.0" text="Log In">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="115.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Label fx:id="errorLabel1" prefHeight="17.0" prefWidth="358.0">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <ImageView fitHeight="204.0" fitWidth="199.0" layoutX="439.0" layoutY="117.0">
+                           <image>
+                              <Image url="@../icons/hospital.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content></Tab>
+                <Tab text="Hospital Staff">
+               <content>
+                  <AnchorPane prefHeight="394.0" prefWidth="692.0">
+                     <children>
+                          <Text layoutX="53.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="P-Track Hospital Management System" wrappingWidth="585.083984375">
+                              <font>
+                                  <Font size="34.0" />
+                              </font>
+                          </Text>
+                          <ImageView fitHeight="39.0" fitWidth="40.0" layoutX="53.0" layoutY="95.0">
+                              <image>
+                                  <Image url="@../icons/user.png" />
+                              </image>
+                          </ImageView>
+                          <Text layoutX="104.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Log In" wrappingWidth="88.046875">
+                              <font>
+                                  <Font size="29.0" />
+                              </font>
+                          </Text>
+                          <ImageView fitHeight="204.0" fitWidth="199.0" layoutX="451.0" layoutY="116.0">
+                              <image>
+                                  <Image url="@../icons/hospital.png" />
+                              </image>
+                          </ImageView>
+                          <VBox layoutX="53.0" layoutY="146.0" prefHeight="192.0" prefWidth="337.0">
+                              <children>
+                                  <Line endX="236.0" startX="-100.0">
+                                      <VBox.margin>
+                                          <Insets bottom="10.0" />
+                                      </VBox.margin>
+                                  </Line>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                  <TextField fx:id="userName" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="190.0" promptText="Username">
+                                      <font>
+                                          <Font size="15.0" />
+                                      </font>
+                                      <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                      </VBox.margin>
+                                  </TextField>
+                                  <PasswordField fx:id="password" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="190.0" promptText="Password">
+                                      <font>
+                                          <Font size="15.0" />
+                                      </font>
+                                      <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                      </VBox.margin>
+                                  </PasswordField>
+                                  <MenuButton fx:id="roleMenu" mnemonicParsing="false" prefHeight="19.0" prefWidth="190.0" text="Role">
+                                      <items>
+                                          <MenuItem fx:id="doctorSec" mnemonicParsing="false" onAction="#doctorChoice" text="Doctor" />
+                                          <MenuItem fx:id="receptionistSec" mnemonicParsing="false" onAction="#receptionistChoice" text="Receptionist" />
+                                      </items>
+                                      <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                      </cursor>
+                                      <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                      </VBox.margin>
+                                  </MenuButton>
+                                  <Button fx:id="loginButton" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="80.0" text="Log In">
+                                      <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                      </cursor>
+                                      <VBox.margin>
+                                          <Insets bottom="5.0" left="115.0" right="5.0" top="5.0" />
+                                      </VBox.margin>
+                                  </Button>
+                                  <Label fx:id="errorLabel" prefHeight="17.0" prefWidth="358.0">
+                                      <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                      </VBox.margin>
+                                  </Label>
+                              </children>
+                          </VBox>
+                     </children>
+                  </AnchorPane>
+               </content></Tab>
+            </tabs>
+        </JFXTabPane>
+    </children>
+    <effect>
+        <Blend />
+    </effect>
+</AnchorPane>

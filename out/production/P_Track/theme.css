@@ -1,0 +1,22 @@
+* {
+    -fx-primary : #0078D7;
+    -fx-secondary : #34465d;
+}
+
+.tab{
+    -fx-background-color: -fx-primary;
+    -fx-pref-width: 240;
+    -fx-pref-height: 50;
+}
+
+.tab-header-background{
+    -fx-background-color: -fx-primary;
+}
+
+.tool-bar{
+    -fx-background-color: -fx-primary;
+}
+
+.jfx-hamburger StackPane{
+    -fx-background-color: -fx-secondary;
+}
